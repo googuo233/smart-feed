@@ -1,0 +1,50 @@
+<view>
+
+<view class="body">
+  <!-- 犬主单位信息 -->
+  <view class="doginfo_title">
+    <view class="divLine"></view>
+    <view class="bodyword">请填写犬主个人信息</view>
+  </view>
+</view>
+
+<!-- 养犬负责人姓名 -->
+<view class="body_style">
+  <input class="intword" type="text" placeholder="养犬人姓名" bindinput="unitName" disabled="{{disable}}"
+    value="{{perInfo.personName}}" />
+</view>
+
+<!-- 性别 -->
+<view class="bodyradio">
+  <view class="bodyword1">性别</view>
+  <radio-group bindchange="getSex">
+    <radio color='#2979ff' value="M" checked="{{M}}" />男
+    <radio color='#2979ff' value="F" checked="{{F}}" />女
+  </radio-group>
+</view>
+
+
+<!-- 详细地址 -->
+<view class="body_style">
+  <textarea class="intword1" type="text" placeholder="请输入详细地址" bindinput="getAddress"
+    value="{{perInfo.address}}">
+</textarea>
+</view>
+
+<!-- 养犬负责人18位身份证号 -->
+<view class="body_style">
+  <input class="intword" type="idcard" maxlength="18" placeholder="请养犬负责人输入18位身份证号" bindinput="getId"
+    disabled="{{disable}}" value="{{perInfo.idCardNumber}}" />
+</view>
+<!-- 养犬负责人手机号 -->
+<view class="body_style">
+  <input class="intword" type="number" maxlength="11" placeholder="请养犬负责人输入手机号" bindinput="getMobbile"
+    value="{{perInfo.personPhoneNumber}}" />
+</view>
+
+
+
+
+<button class="btn" style="width:86%;" bindtap="btn">下一步</button>
+
+</view>

@@ -1,0 +1,17 @@
+<view>
+    <view class="inputop">
+        <input class="top" placeholder="请输入发布的主题" placeholder-class="text" bindinput="inputTopic"></input>
+    </view>
+    <view class="inputinfo">
+        <textarea class="info" placeholder="请输入发布的具体信息" placeholder-class="input" bindinput="inputDetail"></textarea>
+    </view>
+    <view class="upload">
+        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delete" multiple="{{true}}"
+            max-count="5" />
+    </view>
+
+    <view class="warn">.jpg格式最多五张</view>
+    <view class="warn">(请在网络畅通下进行操作)</view>
+
+    <button disabled="{{btnview}}" bindtap="submit" class="submit" style="width:80%;background: linear-gradient(#0381ff, #1f4fdb);">提交</button>
+</view>

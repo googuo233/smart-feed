@@ -1,0 +1,127 @@
+/* pages/captureReason/captureReason.wxss */
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+.all{
+  margin-top: 100rpx;
+}
+
+.txt {
+  width: 100%;
+  height: auto;
+  margin-top: 10rpx;
+}
+
+.nr {
+  width: 90%;
+  margin-left: 35rpx;
+  height: 150rpx;
+  font-size: 30rpx;
+  background-color: #f7f7f7;
+  padding-left: 10rpx;
+  padding-top: 20rpx;
+
+
+}
+
+.doginfo_title {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.divLine {
+  margin-top: 5rpx;
+  width: 10rpx;
+  height: 35rpx;
+  border-radius: 20rpx;
+  background-color: blue;
+  margin-left: 20rpx;
+}
+
+.title {
+  margin-left: 10rpx;
+  font-weight: bold;
+  letter-spacing: 5rpx;
+}
+
+.words {
+  position: absolute;
+  left: 30rpx;
+  top: 380rpx;
+  font-size: small;
+}
+
+.limit {
+  font-size: smaller;
+  color: gray;
+}
+
+
+.conts {
+  width: 100%;
+  height: 200rpx;
+  margin-top: 60rpx;
+}
+
+.areas {
+  width: 90%;
+  margin-left: 35rpx;
+  height: 220rpx;
+  font-size: 30rpx;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  position: relative;
+  padding-top: 15rpx;
+  padding-left: 10rpx;
+}
+
+
+.currentWordNumber {
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.currentWordNumber1 {
+  font-size: 28rpx;
+  color: rgb(255, 0, 0);
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.numberlimit {
+  position: absolute;
+  left: 650rpx;
+  top: 630rpx;
+}
+
+.btn_return {
+  margin-top: 100rpx;
+  background-color: #5677fc;
+  color: #fff;
+  border-radius: 0rpx;
+  font-size: large;
+  text-align: center;
+
+  background: linear-gradient(#0381ff, #1f4fdb);
+}
+.btn_return1 {
+  margin-top: 40rpx;
+  color: black;
+  border-radius: 0rpx;
+  font-size: large;
+  text-align: center;
+}
+
+.upload {
+  margin-top: 20rpx;
+  position: relative;
+  left: 40rpx;
+}

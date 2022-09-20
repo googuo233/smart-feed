@@ -1,0 +1,133 @@
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 150rpx;
+}
+
+.top_one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: -30rpx;
+  margin-left: -30rpx;
+}
+
+.img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.topword {
+  font-size: small;
+}
+
+.line {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: -25rpx;
+}
+
+
+.bodyword {
+  font-size: medium;
+  margin-left: 80rpx;
+}
+
+.body_style {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.intframe {
+  width: 80%;
+  padding-left: 80rpx;
+  margin-bottom: 40rpx;
+}
+
+.intword {
+  font-size: 14.8px;
+  width: 75%;
+  height: 88rpx;
+  margin-bottom: 30rpx;
+  background-color: #f7f7f7;
+  padding-left: 40rpx;
+}
+
+.van-dropdown-menu__item {
+  background-color: #f7f7f7;
+  margin-top: 20rpx;
+}
+
+.van-ellipsis {
+  padding-left: 20rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bodyradio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50rpx;
+  margin-right: 80rpx;
+}
+
+radio {
+  transform: scale(0.7);
+}
+
+/*缩小至0.7倍*/
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked {
+  border-color: #2792ff !important;
+  /* background-color: #fff!important; */
+  background-color: transparent !important;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before {
+  /* 去除对号 */
+  content: '';
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background-color: #2792ff;
+}
+
+.btn {
+  margin-top: 50rpx;
+  color: white;
+  font-size: large;
+  border-radius: 0rpx;
+  background: linear-gradient(#0381ff, #1f4fdb);
+}

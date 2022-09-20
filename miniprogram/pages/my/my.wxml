@@ -1,0 +1,228 @@
+<view class="contian">
+    <image src="../picture/mybg.png" class="bgimg"></image>
+    <view class="my">我的</view>
+    <view class="top">
+        <button bindtap="login" hidden="{{hid1}}" class="login" style="width:30%">登录</button>
+        <view hidden="{{hid1}}" class="avatarborder">
+        </view>
+        <view hidden="{{hid2}}" class="avatarborder">
+            <open-data type="userAvatarUrl" class="avatar"></open-data>
+        </view>
+        <view hidden="{{hid2}}" class="nickname">
+            <open-data type="userNickName" class="nick"></open-data>
+        </view>
+
+    </view>
+    <view class="dogAdmition">
+        <view class="info1">查看犬证信息</view>
+        <view class="check">
+            <view catchtap="dogAdmition">立即查看</view>
+        </view>
+    </view>
+    <view class="operation">
+        <view class="op1" bindtap="declare">
+            <text class="cancel">申报注销</text>
+            <view class="look">立即查看</view>
+            <image class="canIcon" src="../picture/cancellation.png"></image>
+        </view>
+        <view class="op2" bindtap="modifyInfo">
+            <text class="cancel">信息修改</text>
+            <view class="look">立即查看</view>
+            <image class="changeIcon" src="../picture/modify.png"></image>
+        </view>
+    </view>
+    <!-- <view class="dogInfo" wx:if="{{pet.name!=''&&pet.age!=''&&pet.kind!=''}}">
+        <view class="up">
+            <view class="dog">爱犬信息</view>
+            <view class="head">
+                <view class="dogtitle">爱犬昵称：</view>
+                <view class="dogdetail">{{pet.name}}</view>
+            </view>
+        </view>
+        <view class="middle">
+            <view class="dogTitle">爱宠年龄：</view>
+            <view class="dogDetail">{{pet.age}} 月</view>
+        </view>
+        <view class="infobottom">
+            <text class="dogTitle">爱宠品种：
+            </text>
+            <text class="dogDetail">{{pet.kind}}</text>
+        </view>
+    </view> -->
+    <view class="publishline">
+        <view class="bar"></view>
+        <view class="mypub" bindtap="appointment" style="border-bottom:{{back1}}">我的预约</view>
+        <view class="mypub" bindtap="release" style="border-bottom:{{back2}}">我的发布</view>
+        <view class="mypub" bindtap="apply" style="border-bottom:{{back3}}">我的申领</view>
+    </view>
+
+    <!-- 我的预约 -->
+    <view class="pubbottom" wx:if="{{appointment}}">
+        <view class="allword" wx:if="{{appointmentInfo==''}}">您的预约空空如也</view>
+        <block wx:for="{{appointmentInfo}}">
+            <view class="border">
+                <view class="results" wx:if="{{item.unit==1}}">
+                    <text class="checkres">个人</text>
+                </view>
+                <view class="resultf" wx:if="{{item.unit==2}}">
+                    <text class="checkres">单位</text>
+                </view>
+                <view class="detailborder">
+                    <view class="pubtitle" wx:if="{{item.code==-1}}">申请成功</view>
+                    <view class="pubtitle" wx:if="{{item.code==0}}">受理成功</view>
+                    <view class="pubtitle" wx:if="{{item.code==1}}">免疫完成</view>
+                    <view class="pubdetail">{{item.msg}}</view>
+                </view>
+                <view class="res">
+                    <view class="choice">
+                <view class="lookpub" wx:if="{{item.code==-1}}" bindtap="move" data-index="{{index}}">修改</view>
+            </view>
+        </view>
+    </view>
+        </block>
+    </view>
+
+<!-- 我的发布 -->
+    <view class="pubbottom" wx:if="{{release}}">
+        <view class="allword" wx:if="{{punInfo==''}}">您的发布空空如也</view>
+        <block wx:for="{{punInfo}}">
+            <view class="border">
+                <view class="results" wx:if="{{item.stateCode==2}}">
+                    <text class="checkres">通过</text>
+                </view>
+                <view class="resultf" wx:if="{{item.stateCode==3}}">
+                    <text class="checkres">失败</text>
+                </view>
+                <view class="resultd" wx:if="{{item.stateCode==1}}">
+                    <text class="checkres">待审核</text>
+                </view>
+                <view class="detailborder">
+                    <view class="pubtitle">{{item.title}}</view>
+                    <view class="pubdetail">{{item.content}}</view>
+                </view>
+                <view class="res">
+                    <view class="choice">
+                        <view class="lookpub" bindtap="toDogDetail" data-index="{{index}}">查看详情</view>
+                        <view class="reason" wx:if="{{item.stateCode==3}}" catchtap="refuse" data-index="{{index}}">拒绝原因
+                        </view>
+                        <view wx:if="{{item.stateCode==3}}">
+                            <!-- 遮罩层 拒绝-->
+                            <view class="mask2" catchtouchmove="preventTouchMove" wx:if="{{showModal2}}"></view>
+                            <!-- 弹出层 原因-->
+                            <view class="modalDlg2" wx:if="{{showModal2}}">
+                                <text class="title">拒绝原因</text>
+                                <view class="refusetext">
+                                    <view class="word">{{punInfo[resIn].reason}}</view>
+                                </view>
+                                <view bindtap="ok" class="ok">我知道了</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+ <!-- 我的申领 -->
+ <view class="pubbottom" wx:if="{{apply}}">
+        <view class="allword" wx:if="{{applyInfo==''}}">您的申领空空如也</view>
+        <block wx:for="{{applyInfo}}">
+            <view class="border">
+                <view class="results" wx:if="{{item.unit==1}}">
+                    <text class="checkres">个人</text>
+                </view>
+                <view class="resultf" wx:if="{{item.unit==0}}">
+                    <text class="checkres">单位</text>
+                </view>
+                <view class="detailborder">
+                    <view class="pubtitle" wx:if="{{item.code==0}}">申请成功</view>
+                    <view class="pubtitle" wx:if="{{item.code==1}}">办理完成</view>
+                    <view class="pubtitle" wx:if="{{item.code==2}}">犬只已注销</view>
+                    <view class="pubdetail">{{item.msg}}</view>
+                </view>
+                <view class="res">
+                    <view class="choice">
+                <view class="lookpub" wx:if="{{item.code==0}}" bindtap="move1" data-index="{{index}}">修改</view>
+            </view>
+        </view>
+    </view>
+        </block>
+    </view>
+
+
+    
+    <!-- 遮罩层 -->
+    <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <!-- 弹出层 -->
+    <view class="modalDlg" wx:if="{{showModal}}">
+        <!-- 二维码或其他图片 -->
+        <view class="text">我的犬证</view>
+        <view class="city">当前城市：黑河市</view>
+        <swiper class="swiper">
+        <block wx:for="{{dogInfo}}">
+        <swiper-item>
+        <view class="card">
+            <view class="body">
+                <view class="twoWord">
+                    犬种<view>：<view>{{item.petVarieties}}</view>
+                    </view>
+                </view>
+                <view class="twoWord">
+                    毛色<view>：<view>{{item.petColor}}</view>
+                    </view>
+                </view>
+                <view class="twoWord">
+                    犬名<view>：<view>{{item.petName}}</view>
+                    </view>
+                </view>
+                <view class="threeWord" style="height:90rpx">
+                    犬证号<view>：<view style="width:300rpx;height:80rpx;">{{item.serialId}}</view>
+                    </view>
+                </view>
+                <view class="fourWord" wx:if="{{item.chargeName!=null}}">
+                    单位名称<view>：<view>{{item.unitName}}</view>
+                    </view>
+                </view>
+                <view class="fourWord" wx:if="{{item.personName!=null}}">
+                    犬主姓名<view>：<view>{{item.personName}}</view>
+                    </view>
+                </view>
+                <view class="fourWord">
+                    电话号码<view>：<view style="width:230rpx;">{{item.phoneNumber}}</view>
+                    </view>
+                </view>
+                <view class="twoWord" style="height:90rpx;margin-bottom:30rpx;">
+                    住址<view>：<view
+                            style="width:300rpx;height:80rpx;word-break:break-all;overflow-wrap:break-word;-webkit-line-clamp: 2;">
+                            {{item.address}}</view>
+                    </view>
+                </view>
+                <view class="fourWord">
+                    签发日期<view>：<view style="width:350rpx;font-size:small">{{item.issuingTime}}</view>
+                    </view>
+                </view>
+                <view class="twoWord">
+                    年审<view>：<view style="width:350rpx;font-size:small">{{item.auditTime}}</view>
+                    </view>
+                </view>
+                <!-- 二维码生成
+
+        <view catchtap="btn" class="erbtn">点击生成二维码</view>
+        <canvas class="QR" style="width: 100px; height: 100px;" canvas-id="myQrcode"></canvas> -->
+                <!-- <image src="../picture/stamp.png" /> -->
+            </view>
+            <image class="petPhoto" src="{{item.petBodyPhoto}}"></image>
+        </view>
+        <!-- <canvas class="canvas" canvas-id="shareImg">
+</canvas> -->
+<view class="kong"></view>
+<button data-index="{{index}}" class='erbtn' style="width:34%" bindtap='save'>保存犬证</button>
+    </swiper-item>
+        </block>
+        </swiper>
+        <view catchtap="close" class="close">
+            <image style="width:70rpx; height:70rpx;" class="icon" src="../picture/close.png"></image>
+        </view>
+    </view>
+
+
+</view>

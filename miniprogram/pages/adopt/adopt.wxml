@@ -1,0 +1,51 @@
+<view>
+    <!-- 顶部导航-->
+    <view class="top">
+        <view class="bar">
+            <text class="bar1" catchtap="info" style="background-color:{{bgcolor1}};color:{{wcolor1}}">待领养</text>
+            <text class="bar2" catchtap="search" style="background-color:{{bgcolor2}};color:{{wcolor2}}">已领养</text>
+        </view>
+    </view>
+    <!-- 待领养 -->
+    <view hidden="{{hide1}}">
+        <view class="allword" wx:if="{{faiInfo==''}}">目前还没有待领养的犬只，请稍后关注</view>
+    <block wx:for="{{faiInfo}}" hidden="{{hide1}}">
+        <view class="v1" bindtap="jumpPage" data-index="{{index}}">
+            <view class="pic_action1">
+                <image class="await" src="../../images/tobeAdopt.png"></image>
+                <image class="img_action" src="{{item.petBodyPhoto}}"></image>
+            </view>
+            <view class="exhibit1">
+                <view class="pet_type">宠物类别：{{item.petType}}</view>
+                <view class="pet_sex" wx:if="{{item.petSex=='M'}}">性别：公</view>
+                <view class="pet_sex" wx:if="{{item.petSex=='F'}}">性别：母</view>
+                <view class="pet_sex">宠物品种：{{item.petVarieties}}</view>
+                <view class="pet_sex">宠物年龄：{{item.petAge}}个月</view>
+                <view class="pet_sex">宠物毛色：{{item.petColor}}</view>
+            </view>
+        </view>
+    </block>
+</view>
+    <!-- 已领养 -->
+    <view hidden="{{hide2}}">
+    <view class="allword" wx:if="{{sucInfo==''}}">目前还没有已领养的信息，请稍后关注</view>
+    <block wx:for="{{sucInfo}}">
+        <view class="v3">
+            <view class="pic_action3">
+                <image class="already" src="../../images/adopted.png"></image>
+                <image class="img_action" src="{{item.petBodyPhoto}}"></image>
+            </view>
+            <view class="exhibit3">
+                <view class="pet_type">宠物类别：{{item.petType}}</view>
+                <view class="pet_sex" wx:if="{{item.petSex=='M'}}">性别：公</view>
+                <view class="pet_sex" wx:if="{{item.petSex=='F'}}">性别：母</view>
+                <view class="pet_sex">宠物品种：{{item.petVarieties}}</view>
+                <view class="pet_sex">宠物年龄：{{item.petAge}}个月</view>
+                <view class="pet_sex">宠物毛色：{{item.petColor}}</view>
+            </view>
+        </view>
+    </block>
+</view>
+
+
+</view>

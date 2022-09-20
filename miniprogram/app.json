@@ -1,0 +1,121 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/modificationDogPermitPerPic/modificationDogPermitPerPic",
+    "pages/modificationDogPermitPerInfo/modificationDogPermitPerInfo",
+    "pages/modificationDogPermitPer/modificationDogPermitPer",
+    "pages/modificationDogPermitUnitPic/modificationDogPermitUnitPic",
+    "pages/modificationDogPermitUnitInfo/modificationDogPermitUnitInfo",
+    "pages/modificationDogPermitUnit/modificationDogPermitUnit",
+
+    "pages/newVaccinesDogPer/newVaccinesDogPer",
+    "pages/newVaccinesPeoPer/newVaccinesPeoPer",
+    "pages/newVaccinesDogUnit/newVaccinesDogUnit",
+    "pages/newVaccinesPeoUnit/newVaccinesPeoUnit",
+
+    "pages/save/save",
+    "pages/dogAnnualReviewInfo/dogAnnualReviewInfo",
+    "pages/vaccineInfo/vaccineInfo",
+    "pages/dogImmuneInformation/dogImmuneInformation",
+    "pages/infoModification/infoModification",
+    "pages/Doglist/Doglist",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/check/check",
+    "pages/unitDogOwner/unitDogOwner", 
+    "pages/perDogOwner/perDogOwner",
+    "pages/perDogPic/perDogPic",
+    "pages/perDogInfo/perDogInfo",
+    "pages/hospitalList/hospitalList",
+    "pages/unitSearch/unitSearch",
+    "pages/unitAnnualOrder/unitAnnualOrder",
+    "pages/annualOrder/annualOrder",
+    "pages/unitAnnualInfo/unitAnnualInfo",
+    "pages/perSearch/perSearch",
+    "pages/fillOwnerInfo/fillOwnerInfo",
+    "pages/fillUnitInfo/fillUnitInfo",
+    "pages/fillUnitDogInfo/fillUnitDogInfo",
+    "pages/fillPerDogInfo/fillPerDogInfo",
+    "pages/annualInfo/annualInfo",
+    "pages/success/success",
+    "pages/unitAnnual/unitAnnual",
+    "pages/annual/annual",
+    "pages/perReview/perReview",
+    "pages/unitReview/unitReview",
+    "pages/unitDogInfo/unitDogInfo",
+    "pages/unitDogPic/unitDogPic",
+    "pages/modifyInfo/modifyInfo",
+    "pages/finish/finish",
+    "pages/Report/Report",
+    "pages/scanDetail/scanDetail",
+    "pages/captureReason/captureReason",
+    "pages/Shelter/Shelter",
+    "pages/login/login",
+    "pages/annualSuccess/annualSuccess",
+    "pages/adoptSuccess/adoptSuccess",
+    "pages/adoptInfo/adoptInfo",
+    "pages/adopt/adopt",
+    "pages/publish/publish",
+    "pages/publicity/publicity",
+    "pages/declare/declare",
+    "pages/info/info",
+    "pages/infoDetail/infoDetail",
+    "pages/dogDetail/dogDetail"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智能养犬",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#f7f7f7",
+    "selectedColor": "#000000",
+    "color": "#ccc",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "./images/1.png",
+      "selectedIconPath": "./images/5.png"
+    },
+     {
+      "pagePath": "pages/info/info",
+      "text": "资讯",
+      "iconPath": "./images/2.png",
+      "selectedIconPath": "./images/6.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+       "iconPath": "./images/4.png",
+      "selectedIconPath": "./images/3.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json",
+
+  "usingComponents": {
+    "van-field": "./miniprogram_npm/vant-weapp/field/index",
+    "van-collapse": "./miniprogram_npm/vant-weapp/collapse/index",
+    "van-collapse-item": "./miniprogram_npm/vant-weapp/collapse-item/index",
+    "van-icon": "./miniprogram_npm/vant-weapp/icon/index",
+    "van-tree-select": "./miniprogram_npm/vant-weapp/tree-select/index",
+    "van-button": "./miniprogram_npm/vant-weapp/button/index",
+    "van-dropdown-menu": "./miniprogram_npm/vant-weapp/dropdown-menu/index",
+    "van-dropdown-item": "./miniprogram_npm/vant-weapp/dropdown-item/index",
+    "van-row": "./miniprogram_npm/vant-weapp/row/index",
+    "van-col": "./miniprogram_npm/vant-weapp/col/index",
+    "van-uploader": "./miniprogram_npm/vant-weapp/uploader/index",
+    "van-popup": "./miniprogram_npm/vant-weapp/popup/index",
+    "van-cell": "./miniprogram_npm/vant-weapp/cell/index",
+  "van-cell-group": "./miniprogram_npm/vant-weapp/cell-group/index",
+  "van-calendar": "./miniprogram_npm/vant-weapp/calendar/index"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

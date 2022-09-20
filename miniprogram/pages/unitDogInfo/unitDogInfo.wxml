@@ -1,0 +1,100 @@
+<view>
+  <!-- 顶部信息 -->
+  <view class="top">
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[0].inactiveIcon}}"></image>
+        <view class="topword">{{steps[0].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[1].inactiveIcon}}"></image>
+        <view class="topword">{{steps[1].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[2].inactiveIcon}}"></image>
+        <view class="topword">{{steps[2].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_two">
+      <image class="img" src="{{steps[3].inactiveIcon}}"></image>
+      <view class="topword">{{steps[3].text}}</view>
+    </view>
+  </view>
+  <view class="body">
+    <!-- 宠物名称 -->
+    <view class="body_style">
+      <input class="intword" type="text" placeholder="请输入宠物名称" bindinput="getName" disabled="{{disabled}}"
+        value="{{dogInfo.petName}}" />
+    </view>
+    <!-- 宠物类型 -->
+    <!-- <view class="body_style">
+      <input class="intword" type="text" placeholder="请输入宠物类型" bindinput="getType" disabled="{{disabled}}"
+        value="{{dogInfo.petCategory}}" />
+    </view> -->
+
+    <view class="intframe">
+      <van-dropdown-menu>
+        <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bindchange="getType" disabled="{{disabled}}" />
+      </van-dropdown-menu>
+    </view>
+
+
+    <!-- 宠物品种 -->
+    <view class="body_style">
+      <input class="intword" type="text" maxlength="7" placeholder="请输入宠物品种（最多七个字）" bindinput="getKind" disabled="{{disabled}}"
+        value="{{dogInfo.petVarieties}}" />
+    </view>
+    <!-- 宠物性别 -->
+    <view class="intframe">
+      <van-dropdown-menu>
+        <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bindchange="getSex" disabled="{{disabled}}" />
+      </van-dropdown-menu>
+    </view>
+
+
+
+    <!-- 宠物年龄 -->
+    <view class="body_style">
+      <input class="intword"  type="number" placeholder="请输入宠物年龄（月）" bindinput="getAge" disabled="{{disabled}}"
+        value="{{age}}" />
+    </view>
+    <!-- 宠物重量 -->
+    <view class="body_style">
+      <input class="intword" type="digit" placeholder="请输入宠物重量（kg）" bindinput="getWeight" disabled="{{disabled}}"
+        value="{{weight}}" />
+    </view>
+    <!-- 宠物用途 -->
+    <view class="body_style">
+      <input class="intword" type="text" placeholder="请输入宠物用途" bindinput="getUse" disabled="{{disabled}}"
+        value="{{dogInfo.petPurpose}}" />
+    </view>
+    <!-- 绝育状态 -->
+    <view class="intframe">
+      <van-dropdown-menu>
+        <van-dropdown-item value="{{value3}}" options="{{ option3 }}" bindchange="getState" disabled="{{disabled}}" />
+      </van-dropdown-menu>
+    </view>
+
+    <!-- 是否注射疫苗 -->
+    <!-- <view class="bodyradio">
+  <view class="bodyword">是否注射疫苗</view>
+  <radio-group>
+  <radio  color='#2979ff' value="" checked="{{value}}" disabled="true"/>是
+  <radio color='#2979ff' value="false" disabled="true"/>否
+  </radio-group>
+  </view> -->
+    <view class="body_style">
+      <input class="intword" type="text" placeholder="请输入宠物毛色" bindinput="color" disabled="{{disabled}}"
+        value="{{dogInfo.color}}" />
+    </view>
+  </view>
+
+  <button class="btn" style="width:86%;" bindtap="btn">下一步</button>
+</view>

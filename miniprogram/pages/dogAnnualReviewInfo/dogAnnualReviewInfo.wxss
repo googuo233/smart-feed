@@ -1,0 +1,73 @@
+/* pages/infoModification/infoModification.wxss */page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+.all{
+  border: rgba(218, 218, 218, 0.877) 1rpx solid;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+}
+.first{
+  font-size:16px;
+  color: white;
+  height: 60rpx;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.img{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  right: -200rpx;
+
+}
+.top{
+  background-color: #0381ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.second{
+  font-size: 14px;
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+}
+.img1{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  right: 55rpx;
+}
+.last1{
+  display: flex;
+  align-items: center;
+}
+.last{
+  width: 100%;
+  height: 130rpx;
+}
+
+.bottom{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+}
+
+.allword{
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 270%;
+  color: #00000086;
+}

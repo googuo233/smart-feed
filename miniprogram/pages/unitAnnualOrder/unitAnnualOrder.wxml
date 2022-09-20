@@ -1,0 +1,15 @@
+<view>
+    <view class="intframe">
+        <view>
+            <van-dropdown-menu>
+                <van-dropdown-item bindchange="unithospital" value="{{ value1 }}" options="{{ option1 }}" />
+            </van-dropdown-menu>
+            <van-dropdown-menu>
+                <van-dropdown-item bindchange="unittime" value="{{ value2 }}" options="{{ option2 }}" />
+                <import src="1test.wxml" />
+                <template is="1test" data="{{text: 'forbar'}}" />
+            </van-dropdown-menu>
+            <button bindtap="Success" class="btn_order">预约接种</button><!-- 跳转首页 -->
+        </view>
+    </view>
+</view>

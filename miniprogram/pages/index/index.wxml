@@ -1,0 +1,12 @@
+<view wx:if="{{canIUse}}">
+  <view class='header'>
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+  </view>
+  <view class='content'>
+    <view>申请获取以下权限</view>
+    <text>获得您的公开信息(昵称，头像等)</text>
+  </view>
+  <button type="primary" style="width:80%" bindtap="login">登录</button>
+</view>

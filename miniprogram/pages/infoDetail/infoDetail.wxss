@@ -1,0 +1,61 @@
+@import "../../wxParse/wxParse.wxss";
+.contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+page {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rpx;
+    margin-bottom: 60rpx;
+    font-weight: bold;
+    color: rgb(34, 94, 225);
+    position: relative;
+    left: 40rpx;
+}
+
+.pubuser {
+
+    line-height: 60rpx;
+}
+
+.time {
+
+    line-height: 60rpx;
+}
+
+.msg {
+    margin: 0 20rpx;
+    width: 95%;
+    word-break: initial;
+    overflow-wrap: break-word;
+    line-height: 55rpx;
+    text-indent: 2em;
+}
+
+.content {
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    padding: 30rpx 20rpx;
+    box-shadow: 0 5rpx 10rpx 3rpx rgba(160, 160, 160, 0.267);
+    word-break: break-all;
+    margin-bottom: 40rpx;
+}
+
+.cover {
+    width: 600rpx;
+    height: 340rpx;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 40rpx;
+}

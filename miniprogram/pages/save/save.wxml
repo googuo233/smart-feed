@@ -1,0 +1,3 @@
+<canvas  class="shareImg" canvas-id="shareImg" style="width:95%;height:700rpx;">
+</canvas>
+<button class='saveImg' style="width:86%;" bindtap='save'>保存图片</button>

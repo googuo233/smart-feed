@@ -1,0 +1,159 @@
+<view>
+  <!-- 顶部信息 -->
+  <view class="top">
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[0].inactiveIcon}}"></image>
+        <view class="topword">{{steps[0].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[1].inactiveIcon}}"></image>
+        <view class="topword">{{steps[1].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[2].inactiveIcon}}"></image>
+        <view class="topword">{{steps[2].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_two">
+      <image class="img" src="{{steps[3].inactiveIcon}}"></image>
+      <view class="topword">{{steps[3].text}}</view>
+    </view>
+  </view>
+
+  <view class="body">
+    <!-- 犬主个人信息 -->
+    <view class="doginfo_title">
+      <view class="divLine"></view>
+      <view class="bodyword">请填写犬主个人信息</view>
+    </view>
+
+    <!-- 输入犬主信息 -->
+    <view class="body_style0">
+      <input class="intword" type="text" placeholder="请输入犬主姓名（如实填写）" disabled="{{disabled}}" bindinput="getDogOwner" 
+        value="{{ownerInfo.ownerName}}" />
+    </view>
+    <!-- 性别单选框 -->
+    <view class="bodysex">
+      <view class="bodyword1">性别</view>
+      <radio-group bindchange="getSex">
+        <radio color='#2979ff' value="M"  checked="{{m}}" />男
+        <radio color='#2979ff' value="F"  checked="{{f}}" />女
+      </radio-group>
+    </view>
+
+    <!-- 请选择单位所在辖区
+<view class="body_style">
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item  title="请选择单位所在辖区" name="0">
+     下拉框内部 -->
+    <!-- <van-tree-select
+        height="250rpx"
+        items="{{ items }}"
+        main-active-index="{{ mainActiveIndex }}"
+        active-id="{{ activeId }}"
+        bind:click-nav="onClickNav"
+        bind:click-item="onClickItem"
+    />
+    <view class="row">
+      <van-button  size="mini" custom-style=
+      "width:10%;">取消</van-button>
+      <van-button  size="mini" custom-style=
+      "width:10%; color:#298df8;">确定</van-button>
+    </view>
+  </van-collapse-item>
+  </van-collapse>
+</view> -->
+    <!-- 申办派出所 -->
+
+    <view class="intframe">
+      <view>
+        <van-dropdown-menu>
+          <van-dropdown-item value="{{ value1}}" options="{{ option1 }}" bindchange="getIssuingUnit" />
+        </van-dropdown-menu>
+      </view>
+    </view>
+    <!-- 请输入详细住址 -->
+    <view class="body_style1">
+      <textarea class="intword1" type="text" placeholder="请输入详细住址"  bindinput="getAddress"
+        value="{{ownerInfo.ownerAddress}}" />
+    </view>
+
+    <!-- 请如实输入手机号 -->
+    <view class="body_style">
+      <input class="intword" type="number" minlength="11" maxlength="11"  placeholder="请如实输入手机号"
+        bindinput="getphone" value="{{ownerInfo.phoneNumber}}" />
+    </view>
+
+    <!-- 请如实输入18位身份证号 -->
+    <view class="body_style">
+      <input class="intword" type="idcard" minlength="18" maxlength="18" disabled="{{disabled}}" placeholder="请如实输入18位身份证号"
+        bindinput="getId" value="{{ownerInfo.idCardNumber}}" />
+    </view>
+    <!-- 住房信息单选框 -->
+    <view class="bodysex">
+      <view class="bodyword2">住房信息</view>
+      <radio-group bindchange="getHouse">
+        <radio color='#2979ff' value="自有房" checked="{{hor1}}" />自有房
+        <radio color='#2979ff' value="租房" checked="{{hor2}}" />租房
+      </radio-group>
+    </view>
+
+    <!-- 请上传犬主证件信息 -->
+    <view class="doginfo_title">
+      <view class="divLine"></view>
+      <view class="bodyword">请上传犬主证件信息</view>
+    </view>
+
+    <view class="imgsecond">
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Perhalf.png" bindtap="ChooseImg0" hidden="{{unhide[0]}}">
+          </image>
+          <image class="Uploadphotos" src="{{tempFilePaths0}}" bindtap="PreviewImg0" hidden="{{hide[0]}}"
+            bindlongpress="DeleteImg0"></image>
+          <view class="word">（非必传）</view>
+        </view>
+      </view>
+
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Housecollection.png" bindtap="ChooseImg1"
+            hidden="{{unhide[1]}}"></image>
+          <image class="Uploadphotos" src="{{tempFilePaths1}}" bindtap="PreviewImg1" hidden="{{hide[1]}}"
+            bindlongpress="DeleteImg1"></image>
+
+        </view>
+      </view>
+    </view>
+
+    <view class="imgsecond">
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/full-face.png" bindtap="ChooseImg2" hidden="{{unhide[2]}}">
+          </image>
+          <image class="Uploadphotos" src="{{tempFilePaths2}}" bindtap="PreviewImg2" hidden="{{hide[2]}}"
+            bindlongpress="DeleteImg2"></image>
+
+        </view>
+      </view>
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Reverse.png" bindtap="ChooseImg3" hidden="{{unhide[3]}}">
+          </image>
+          <image class="Uploadphotos" src="{{tempFilePaths3}}" bindtap="PreviewImg3" hidden="{{hide[3]}}"
+            bindlongpress="DeleteImg3"></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <button class="btn" style="width:86%;" bindtap="btn">下一步</button>
+</view>

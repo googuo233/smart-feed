@@ -1,0 +1,12 @@
+<view class="body">
+
+  <view>
+    <image class="imgsuc" src="../../images/success.png"></image>
+  </view>
+  <view class="bodyword">
+    您的申请已经提交成功,请等待审核....
+  </view>
+</view>
+
+
+<button class="btn" style="width:86%" bindtap="btn">返回首页</button>

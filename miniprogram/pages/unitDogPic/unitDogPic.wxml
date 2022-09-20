@@ -1,0 +1,79 @@
+<view>
+  <view class="top">
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[0].inactiveIcon}}"></image>
+        <view class="topword">{{steps[0].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[1].inactiveIcon}}"></image>
+        <view class="topword">{{steps[1].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[2].inactiveIcon}}"></image>
+        <view class="topword">{{steps[2].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_two">
+      <image class="img" src="{{steps[3].inactiveIcon}}"></image>
+      <view class="topword">{{steps[3].text}}</view>
+    </view>
+  </view>
+
+  <view class="body">
+    <view class="doginfo_title">
+      <view class="divLine"></view>
+      <view class="bodyword">请上传犬只近期照片</view>
+    </view>
+
+
+    <view class="bodytop">
+      <view class="body_card1">
+        <image class="Uploadphotos" src="../../images/Dogpositive.png" bindtap="ChooseImg0" hidden="{{unhide[0]}}">
+        </image>
+        <image class="Uploadphotos" src="{{petFullFacePhoto}}" bindtap="PreviewImg0" hidden="{{hide[0]}}"
+          bindlongpress="DeleteImg0"></image>
+      </view>
+    </view>
+    <view class="imgsecond">
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Dogleft.png" bindtap="ChooseImg1" hidden="{{unhide[1]}}">
+          </image>
+          <image class="Uploadphotos" src="{{petLeftSidePhoto}}" bindtap="PreviewImg1" hidden="{{hide[1]}}"
+            bindlongpress="DeleteImg1"></image>
+        </view>
+      </view>
+
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Dogright.png" bindtap="ChooseImg2" hidden="{{unhide[2]}}">
+          </image>
+          <image class="Uploadphotos" src="{{petRightSidePhoto}}" bindtap="PreviewImg2" hidden="{{hide[2]}}"
+            bindlongpress="DeleteImg2"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 上传主主人与犬只的合照 -->
+  <view class="doginfo_title">
+    <view class="divLine"></view>
+    <view class="bodyword">请上传主人和犬只合照</view>
+    <view class="bodyword1">（非必传）</view>
+  </view>
+  <view class="bodytop">
+    <view class="body_card1">
+      <image class="Uploadphotos" src="../../images/Dogper.png" bindtap="ChooseImg3" hidden="{{unhide[3]}}"></image>
+      <image class="Uploadphotos" src="{{petGroupPhoto}}" bindtap="PreviewImg3" hidden="{{hide[3]}}"
+        bindlongpress="DeleteImg3"></image>
+    </view>
+  </view>
+  <button class="btn" style="width:86%;" bindtap="btn" disabled="{{btnview}}">提交审核</button>
+</view>

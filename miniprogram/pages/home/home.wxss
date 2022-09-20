@@ -1,0 +1,345 @@
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.police {
+  width: 95%;
+  height: 350rpx;
+  margin-left: 20rpx;
+  border-radius: 30rpx;
+}
+
+.doginfo_title {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.divLine {
+  margin-top: 5rpx;
+  width: 10rpx;
+  height: 35rpx;
+  border-radius: 20rpx;
+  background-color: blue;
+  margin-left: 20rpx;
+}
+
+.title {
+  margin-left: 15rpx;
+  letter-spacing: 5rpx;
+}
+
+.dogad {
+  width: 42%;
+  height: 240rpx;
+  margin-left: 20rpx;
+}
+
+.agament {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40rpx;
+}
+
+.vaccines {
+  width: 95%;
+  height: 250rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.move {
+  width: 42%;
+  height: 240rpx;
+}
+
+.agament1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40rpx;
+}
+
+.move1 {
+  width: 42%;
+  height: 260rpx;
+}
+
+
+
+
+/* 弹出层里面的按钮 */
+
+.close {
+  width: 100%;
+  height: 100rpx;
+  color: black;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* 弹出层里面的文字 */
+.text {
+  color: gray;
+  font-weight: 700;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1rpx rgba(218, 218, 218, 0.877);
+}
+
+.text1 {
+  color: black;
+  font-weight: 700;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1rpx rgba(218, 218, 218, 0.877);
+}
+
+.text2 {
+  color: black;
+  font-weight: 700;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1rpx rgba(218, 218, 218, 0.877);
+}
+
+/* 
+    动画效果 */
+/*模态框*/
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  height: 400rpx;
+  background-color: #fff;
+  border-radius: 40rpx 40rpx 0 0;
+}
+
+/*动画前初始位置*/
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.Tword1 {
+  width: 100%;
+  height: 100rpx;
+}
+
+/* 遮罩层 */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.5;
+}
+
+/* 弹出层 */
+.modalDlg {
+  width: 95%;
+  height: 700rpx;
+  position: fixed;
+  top: 300rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  background: linear-gradient(#1f4fdb, #0381ff);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 弹出层里面的图片 */
+.modalDlg .card .petPhoto {
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+/* 弹出层里面的按钮 */
+
+.close1 {
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 120rpx;
+}
+
+/* 弹出层里面的文字 */
+.text5 {
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.city {
+  font-size: small;
+  color: #fff;
+  position: absolute;
+  top: 80rpx;
+  left: 50rpx;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 75%;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  top: 60rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  /* font-weight:bold; */
+}
+
+.card .twoWord view {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 150rpx;
+}
+
+.card .threeWord view {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 150rpx;
+}
+
+.card .fourWord view {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 150rpx;
+}
+
+.card .twoWord view view {
+  letter-spacing: 0;
+  width: 180rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 10rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card .threeWord view view {
+  letter-spacing: 0;
+  width: 180rpx;
+  height: 40rpx;
+  position: absolute;
+  left: -168rpx;
+  top: 42rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card .fourWord view view {
+  letter-spacing: 0;
+  width: 180rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 10rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card .body {
+  margin: auto 0;
+}
+
+/* .license{  
+    display: block;
+    width:40rpx;
+    height:40rpx;
+} */
+.card view {
+  margin-left: 20rpx;
+}
+
+.card .threeWord {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 30rpx;
+}
+
+.card .fourWord {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 10rpx;
+}
+
+.card .twoWord {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 90rpx;
+}
+
+.card image {
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  bottom: 10rpx;
+  right: 30rpx;
+}

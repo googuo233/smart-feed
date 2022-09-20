@@ -1,0 +1,73 @@
+<view>
+
+<view class="body">
+  <!-- 犬主单位信息 -->
+  <view class="doginfo_title">
+    <view class="divLine"></view>
+    <view class="bodyword">请填写犬只信息</view>
+  </view>
+</view>
+<view class="body">
+  <!-- 宠物名称 -->
+  <view class="body_style">
+    <input class="intword" type="text" placeholder="请输入宠物名称" placeholder-class="phcolor" bindinput="getName"
+      value="{{dogInfo.petName}}" disabled="{{disable}}" />
+  </view>
+  <!-- 宠物类型 -->
+  <!-- <view  class="body_style">
+<input class="intword" type="text" placeholder="请输入宠物类型" placeholder-class="phcolor" bindinput="getType" />
+</view> -->
+  <view class="intframe">
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bindchange="getType" disabled="{{disable}}" />
+    </van-dropdown-menu>
+  </view>
+
+
+  <!-- 宠物品种 -->
+  <view class="body_style">
+    <input class="intword" type="text" maxlength="7" placeholder="请输入宠物品种（最多七个字）" placeholder-class="phcolor"
+      bindinput="getKind" value="{{dogInfo.petVarieties}}" disabled="{{disable}}" />
+  </view>
+  <!-- 宠物性别 -->
+  <view class="intframe">
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bindchange="getSex" disabled="{{disable}}" />
+    </van-dropdown-menu>
+  </view>
+
+
+
+  <!-- 宠物年龄 -->
+  <view class="body_style">
+    <input class="intword"  type="number" placeholder="请输入宠物年龄（月）" placeholder-class="phcolor" bindinput="getAge"
+      value="{{age}}" disabled="{{disable}}" />
+  </view>
+  <!-- 宠物重量 -->
+  <view class="body_style">
+    <input class="intword"  type="digit" placeholder="请输入宠物重量（kg）" placeholder-class="phcolor" bindinput="getWeight"
+      value="{{weight}}" disabled="{{disable}}" />
+  </view>
+  <!-- 宠物用途 -->
+  <view class="body_style">
+    <input class="intword" type="text" placeholder="请输入宠物用途" placeholder-class="phcolor" bindinput="getUse"
+      value="{{dogInfo.petPurpose}}" disabled="{{disable}}" />
+  </view>
+  <!-- 绝育状态 -->
+  <view class="intframe">
+
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{ value3 }}" options="{{ option3 }}" bindchange="getState" disabled="{{disable}}" />
+    </van-dropdown-menu>
+
+  </view>
+</view>
+
+<!-- 宠物毛色 -->
+<view class="body_style">
+  <input class="intword" type="text" placeholder="请输入宠物毛色" placeholder-class="phcolor" bindinput="getColor"
+    value="{{dogInfo.petColor}}" disabled="{{disable}}" />
+</view>
+
+<button class="btn" style="width:86%;" bindtap="btn">提交</button>
+</view>

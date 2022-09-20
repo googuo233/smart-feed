@@ -1,0 +1,62 @@
+/* pages/publish/publish.wxss */
+page {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+
+.inputop {
+    margin-bottom: 30rpx;
+    padding: 0 10rpx;
+}
+
+.top {
+    border: solid 1rpx #f7f7f7;
+    width: 85%;
+    height: 90rpx;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding-left: 40rpx;
+    font-size: 14.8px;
+}
+
+.text {
+    margin: auto 0;
+}
+
+.info {
+    border: solid 1rpx #f7f7f7;
+    width: 85%;
+    height: 250rpx;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 40rpx;
+    font-size: 14.8px;
+}
+
+
+.inputinfo {
+    margin-bottom: 20rpx;
+    padding: 0 30rpx;
+}
+
+.upload {
+    position: relative;
+    left: 40rpx;
+}
+
+.warn {
+    color: rgba(160, 160, 160, 0.842);
+    position: relative;
+    left: 40rpx;
+    margin-top: 8rpx;
+}
+
+.submit {
+    position: absolute;
+    bottom: 60rpx;
+    left: 75rpx;
+    font-weight: bold;
+    color: white;
+}

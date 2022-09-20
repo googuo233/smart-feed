@@ -1,0 +1,73 @@
+/* pages/declare/declare.wxss */
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.conts {
+  width: 100%;
+  height: auto;
+  margin-top: 50rpx;
+}
+
+.areas {
+  width: 90%;
+  margin-left: 35rpx;
+  height: 180rpx;
+  font-size: 30rpx;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  position: relative;
+  padding-top: 15rpx;
+  padding-left: 40rpx;
+}
+
+
+.currentWordNumber {
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  top: 140rpx;
+  left: 570rpx;
+}
+
+.numberlimit {
+  position: absolute;
+  left: 650rpx;
+  top: 630rpx;
+}
+
+
+.submit {
+  margin-top: 50rpx;
+  color: white;
+  font-size: large;
+  border-radius: 0rpx;
+  background: linear-gradient(#0381ff, #1f4fdb);
+}
+
+.inputop {
+  margin-bottom: 30rpx;
+  padding: 0 10rpx;
+}
+
+.top {
+  width: 85%;
+  height: 90rpx;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  padding-left: 40rpx;
+  margin-top: 20rpx;
+}
+
+.text {
+  margin: auto 0;
+  color: gray;
+  font-size: 30rpx;
+}
+
+.description {
+  padding-right: 50rpx;
+  padding-left: 10rpx;
+}

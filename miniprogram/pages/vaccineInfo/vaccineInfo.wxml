@@ -1,0 +1,29 @@
+<view>
+  <block wx:for="{{dogInfo}}">
+<view class="all" data-index="{{index}}" bindtap="btn2">
+<view class="top">
+<view class="first">预约疫苗信息</view>
+  <image class="img" src="../../images/rightarrow.png"></image>
+</view>
+
+<view class="second">
+<view>宠物名称：{{item.name}}</view>
+<view>宠物类型：{{item.type}}</view>
+<view>宠物品种：{{item.varieties}}</view>
+<view wx:if="{{item.sex=='M'}}">宠物性别：公</view>
+<view wx:if="{{item.sex=='F'}}">宠物性别：母</view>
+</view>
+</view>
+</block>
+<view class="allword" wx:if="{{dogInfo==''}}">您还没有疫苗信息，请预约并接种</view>
+<view class="last"></view>
+<view class="bottom">
+<view bindtap="btn1" class="btn1">
+<view class="word">回到首页</view>
+</view>
+<!-- <view bindtap="btn" class="btn" style="background: linear-gradient(#0381ff, #1f4fdb);">
+  <view class="word1">申领新的犬证</view>
+</view> -->
+</view>
+</view>
+

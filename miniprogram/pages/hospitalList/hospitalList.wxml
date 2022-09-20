@@ -1,0 +1,36 @@
+<view>
+
+<block wx:for="{{info}}">
+  <!-- 医院信息 -->
+  <view class="body" bindtap="dogOwer" data-index="{{index}}">
+    <view class="bodyfirst">
+      <image class="img1" src="../../images/hospital.png"></image>
+      <view class="firstword">{{item.name}}</view>
+      <image class="img" src="../../images/rightarrow.png"></image>
+    </view>
+    <view class="body1">
+      <view class="bodysecond">
+        <view class="secondword">电话：{{item.phoneNumber}}</view>
+      </view>
+
+      <view class="bodythird">
+        <view class="secondword">地址：{{item.profile}}</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

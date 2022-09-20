@@ -1,0 +1,181 @@
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 150rpx;
+}
+
+.top_one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: -30rpx;
+  margin-left: -30rpx;
+}
+
+.img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.topword {
+  font-size: small;
+}
+
+.line {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: -25rpx;
+}
+
+.body {
+  margin-top: 50rpx;
+
+}
+
+.divLine {
+  width: 10rpx;
+  height: 35rpx;
+  border-radius: 20rpx;
+  background-color: blue;
+  margin-left: 20rpx;
+}
+
+.doginfo_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bodyword {
+  font-weight: bold;
+  margin-left: 15rpx;
+  letter-spacing: 5rpx;
+}
+
+.bodyword1 {
+  font-size: 14.8px;
+  font-weight: 700;
+  margin-left: 80rpx;
+  letter-spacing: 5rpx;
+}
+
+.body_style {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/*派出所*/
+.van-dropdown-menu__item {
+  background-color: #f7f7f7;
+  margin-top: 20rpx;
+}
+
+.intframe {
+  width: 80%;
+  padding-left: 80rpx;
+  margin-bottom: 40rpx;
+}
+
+/*养犬地址*/
+.body_style1 {
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.intword {
+  font-size: 14.8px;
+  margin-bottom: 30rpx;
+  width: 75%;
+  height: 88rpx;
+  background-color: #f7f7f7;
+  padding-left: 40rpx;
+}
+
+.Uploadphotos {
+  width: 256rpx;
+  height: 192rpx;
+}
+
+.bodytop {
+  margin-top: 30rpx;
+}
+
+.body_card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgsecond {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+
+.lasttext {
+  font-size: small;
+  margin-left: 10rpx;
+  margin-top: 50rpx;
+}
+
+.btn {
+  margin-top: 50rpx;
+  color: white;
+  font-size: large;
+  border-radius: 0rpx;
+  background: linear-gradient(#0381ff, #1f4fdb);
+}
+
+
+.bodysex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 80rpx;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+radio {
+  transform: scale(0.7);
+}
+
+/*缩小至0.7倍*/
+radio .wx-radio-input.wx-radio-input-checked {
+  border-color: #2792ff !important;
+  /* background-color: #fff!important; */
+  background-color: transparent !important;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before {
+  /* 去除对号 */
+  content: '';
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background-color: #2792ff;
+}
+
+.van-ellipsis {
+  padding-left: 20rpx;
+}

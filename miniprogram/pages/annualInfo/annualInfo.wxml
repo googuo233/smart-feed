@@ -1,0 +1,20 @@
+<view class="v1">
+    <view class="v2">
+        <image class="pic_info" mode="widthFix" src="{{pic_info}}"></image>
+        <view class="v3">
+            <view class="pet_name">宠物名称：{{pet_name}}</view>
+            <view class="pet_type">宠物类型：{{pet_type}}</view>
+            <view class="pet_breed">宠物品种：{{pet_breed}}</view>
+            <view class="pet_sex">宠物性别：{{pet_sex}}</view>
+            <view class="ownerDate">犬证有效期：{{ownerDate}}</view>
+            <view class="whether">是否注射疫苗：{{whether}}</view>
+        </view>
+        <view class="v4">
+            <button class="btn_Submit" style="width:80%" bindtap="jumpPage" type="info">已经接种申报年审</button>
+            <button class="btn_Order" style="width:80%" bindtap="jumpPageTwo" type="info">预约接种</button>
+        </view>
+    </view>
+
+
+
+</view>

@@ -1,0 +1,36 @@
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.pages {
+  margin-top: 120rpx;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 150rpx;
+}
+
+.imgsuc {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.bodyword {
+  margin-top: 30rpx;
+  font-size: larger;
+  padding: 0rpx 180rpx 0rpx 180rpx;
+}
+
+.btn {
+  margin-top: 100rpx;
+  color: white;
+  font-size: large;
+  border-radius: 0rpx;
+  background: linear-gradient(#0381ff, #1f4fdb);
+}

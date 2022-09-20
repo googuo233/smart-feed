@@ -1,0 +1,30 @@
+<view>
+  <block wx:for="{{dogInfo}}">
+    <view class="all" bindtap="btn" data-index="{{index}}">
+      <view class="top">
+        <view class="first">犬只信息列表</view>
+        <image class="img" src="../../images/rightarrow.png"></image>
+      </view>
+<view class="last1">
+      <view class="second">
+        <view>宠物名称：{{item.petName}}</view>
+        <view>宠物类型：{{item.petType}}</view>
+        <view>宠物品种：{{item.petVarieties}}</view>
+        <view wx:if="{{item.petSex=='M'}}">宠物性别：公</view>
+        <view wx:if="{{item.petSex=='F'}}">宠物性别：母</view>
+      </view>
+      <image class="img1" src="{{item.petBodyPhoto}}"></image>
+    </view>
+    </view>
+  </block>
+  <view class="allword" wx:if="{{dogInfo==''}}">您还没有犬只，请预约新的疫苗</view>
+  <view class="last"></view>
+<view class="bottom">
+<view bindtap="btn1" class="btn1">
+<view class="word">回到首页</view>
+</view>
+<view bindtap="btn2" class="btn" style="background: linear-gradient(#0381ff, #1f4fdb);">
+  <view class="word1">预约新的疫苗</view>
+</view>
+</view>
+</view>

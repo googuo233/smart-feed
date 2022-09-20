@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "onReachBottomDistance":1,
+  "enablePullDownRefresh":true,
+  "navigationBarTitleText": "资讯 / 寻犬"
+}

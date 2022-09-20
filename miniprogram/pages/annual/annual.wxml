@@ -1,0 +1,16 @@
+<view>
+
+  <view class="doginfo_title">
+    <view class="divLine"></view>
+    <view class="title"> 录入犬主信息，进行查询</view>
+  </view>
+
+  <view class="body_style">
+    <input bindinput="iptname" class="intword" type="text" placeholder="请输入犬主姓名" placeholder-class="phcolor" />
+  </view>
+
+  <view class="body_style">
+    <input bindinput="iptid" class="intword" type="idcard" minlength="18" maxlength="18" placeholder="请输入犬主身份证号" />
+  </view>
+  <button bindtap="sub" form-type="submit" class="btn" style="width:86%;">查询</button>
+</view>

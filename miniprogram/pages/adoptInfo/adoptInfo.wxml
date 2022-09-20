@@ -1,0 +1,30 @@
+<view>
+    <view class="v1">
+        <input bindinput="name" type="text" class="input_name" required="required" placeholder="请输入领养人姓名"
+            placeholder-class="phcolor" />
+    </view>
+    <!-- 性别单选框 -->
+    <view class="bodysex">
+        <view class="bodyword">性别</view>
+        <radio-group bindchange="getSex">
+            <radio color='#2979ff' value="M" />男
+            <radio color='#2979ff' value="F" />女
+        </radio-group>
+    </view>
+    <view class="v2">
+        <input bindinput="idcard" type="idcard" class="input_ID" value="{{IdNum}}" required="required" maxlength='18'
+            placeholder="请输入领养人身份证号" placeholder-class="phcolor" />
+    </view>
+    <view class="v3">
+        <input value="{{phone}}" type="number" class="input_number" required="required" maxlength='11' bindinput="phone"
+            placeholder="请输入领养人手机号" placeholder-class="phcolor" />
+    </view>
+    <!-- <view class="v4">
+        <input type="text" class="input_code"   placeholder="请输入验证码" placeholder-class="phcolor" />
+        <text class="gain_code" bindtap="" >获取验证码</text>
+    </view> -->
+    <view class="v5">
+        <button class="btn_sub" bindtap="jumpPage">提交申请</button>
+    </view>
+
+</view>

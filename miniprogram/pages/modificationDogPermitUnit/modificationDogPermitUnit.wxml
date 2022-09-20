@@ -1,0 +1,147 @@
+<view>
+  <!-- 顶部信息 -->
+  <view class="top">
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[0].inactiveIcon}}"></image>
+        <view class="topword">{{steps[0].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[1].inactiveIcon}}"></image>
+        <view class="topword">{{steps[1].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_one">
+      <view class="top_two">
+        <image class="img" src="{{steps[2].inactiveIcon}}"></image>
+        <view class="topword">{{steps[2].text}}</view>
+      </view>
+      <image class="line" src="../../images/line.png"></image>
+    </view>
+    <view class="top_two">
+      <image class="img" src="{{steps[3].inactiveIcon}}"></image>
+      <view class="topword">{{steps[3].text}}</view>
+    </view>
+  </view>
+
+  <view class="body">
+    <!-- 犬主单位信息 -->
+    <view class="doginfo_title">
+      <view class="divLine"></view>
+      <view class="bodyword">请填写单位信息</view>
+    </view>
+    <!-- 输入单位信息 -->
+    <view class="body_style">
+      <input class="intword" type="text" placeholder="请输入单位名称（如实填写）" bindinput="unitName"
+        value="{{param.unitName}}" />
+    </view>
+    <!-- 单位注册号 -->
+    <view class="body_style">
+      <input class="intword" type="text" placeholder="请输入单位注册号" bindinput="registrationId"
+      value="{{param.registrationId}}" />
+    </view>
+    <!-- 申办派出所 -->
+
+    <view class="intframe">
+      <view>
+        <van-dropdown-menu>
+          <van-dropdown-item value="{{ value1}}" options="{{ option1 }}" bindchange="PoliceStation" />
+        </van-dropdown-menu>
+      </view>
+    </view>
+
+    <!-- 请输入养犬地址 -->
+    <view class="body_style1">
+      <input class="intword" type="text" placeholder="请输入养犬地址" bindinput="address"
+        value="{{param.address}}" />
+    </view>
+
+    <!-- 请如实填写养犬负责人 -->
+    <view class="body_style">
+      <input class="intword" type="text" placeholder="请如实填写养犬负责人" bindinput="personInCharge" disabled="{{disabled}}"
+        value="{{param.personInCharge}}" />
+    </view>
+    <!-- 负责人性别单选框 -->
+    <view class="bodysex">
+      <view class="bodyword1">性别</view>
+      <radio-group bindchange="getSex">
+        <radio  color='#2979ff' checked="{{m}}" value="M" />男
+        <radio color='#2979ff' checked="{{f}}" value="F" />女
+      </radio-group>
+    </view>
+
+    <!-- 请如实填写养犬负责人手机号 -->
+    <view class="body_style">
+      <input class="intword" type="number" maxlength="11" placeholder="请如实填写养犬负责人手机号" bindinput="phoneNumber"
+         value="{{param.phoneNumber}}" />
+    </view>
+    <!-- 请如实填写养犬负责人18位身份证号 -->
+    <view class="body_style">
+      <input class="intword" type="idcard" minlength="18" maxlength="18" placeholder="请如实填写养犬负责人18位身份证号"
+        bindinput="idCardNumber" disabled="{{disabled}}" value="{{param.idCardNumber}}" />
+    </view>
+
+    <!-- 获取法人姓名 -->
+    <view class="body_style">
+      <input bindinput="lawname" class="intword" type="text" placeholder="法人姓名，根据上传营业执照自动识别" value="{{lawName}}" />
+    </view>
+
+    <!-- 请上传犬主证件信息 -->
+    <view class="doginfo_title">
+      <view class="divLine"></view>
+      <view class="bodyword">请上传犬主证件信息</view>
+    </view>
+    <!-- 上传营业执照 -->
+    <view class="imgsecond">
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Businesslicense.png" bindtap="ChooseImg0"
+            hidden="{{unhide[0]}}"></image>
+          <image class="Uploadphotos" src="{{businessLicensePhoto}}" bindtap="PreviewImg0" hidden="{{hide[0]}}"
+            bindlongpress="DeleteImg0"></image>
+        </view>
+      </view>
+      <!-- 上传法人身份证照片 -->
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/legalperson.png" bindtap="ChooseImg1" hidden="{{unhide[1]}}">
+          </image>
+          <image class="Uploadphotos" src="{{legalIdCardPhoto}}" bindtap="PreviewImg1" hidden="{{hide[1]}}"
+            bindlongpress="DeleteImg1"></image>
+
+        </view>
+      </view>
+    </view>
+    <!-- 上传养犬负责人身份证正面照片 -->
+    <view class="imgsecond">
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Unitperson1.png" bindtap="ChooseImg2" hidden="{{unhide[2]}}">
+          </image>
+          <image class="Uploadphotos" src="{{chargeIdCardPhoto1}}" bindtap="PreviewImg2" hidden="{{hide[2]}}"
+            bindlongpress="DeleteImg2"></image>
+
+        </view>
+      </view>
+      <!-- 上传养犬负责人身份证反面照片 -->
+      <view class="bodytop">
+        <view class="body_card">
+          <image class="Uploadphotos" src="../../images/Unitperson2.png" bindtap="ChooseImg3" hidden="{{unhide[3]}}">
+          </image>
+          <image class="Uploadphotos" src="{{chargeIdCardPhoto2}}" bindtap="PreviewImg3" hidden="{{hide[3]}}"
+            bindlongpress="DeleteImg3"></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- <view class="lasttext">法人姓名，根据上传营业执照自动识别</view> -->
+
+  <button class="btn" style="width:86%;" bindtap="btn">下一步</button>
+</view>

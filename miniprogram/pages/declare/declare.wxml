@@ -1,0 +1,19 @@
+<view>
+    <view class="reason">
+        <view class="inputop">
+            <input class="top" bindinput="resual" value="{{topic}}" placeholder="注销申报原因"
+                placeholder-class="text"></input>
+        </view>
+    </view>
+    <view class="description">
+        <view class="conts">
+            <textarea class="areas" placeholder='输入描述，最多100汉字' placeholder-style="font-size:30rpx"
+                maxlength="{{orderNoteMax}}" bindinput="inputs">
+                <text class="currentWordNumber">{{currentWordNumber|0}}/{{orderNoteMax}}</text>
+                <text class="hint">{{texts}}</text>
+            </textarea>
+        </view>
+    </view>
+    <button class="submit" style="width:86%;" bindtap="submit">上报系统</button>
+
+</view>

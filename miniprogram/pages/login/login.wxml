@@ -1,0 +1,36 @@
+<!--总框-->
+<view>
+  <image class="top" src="./login.png"></image>
+  <view>
+    <view class="topword">验证用户名</view>
+  </view>
+
+  <view class="body">
+
+    <input bindinput="username" type="text" class="intphone" placeholder="请输入用户名" placeholder-class="phcolor" />
+
+    <view class="second">
+      <!--第二个输入框-->
+      <input bindinput="password" password="true" type="text" class="intphone" placeholder="请输入密码"
+        placeholder-class="phcolor" />
+      <!--获取短信-->
+      <!-- <view class="btn1">获取验证码</view> -->
+    </view>
+    <!--登录按钮-->
+    <button bindtap="btn" class="btn" style="width:80%">登录</button>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

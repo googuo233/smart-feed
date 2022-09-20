@@ -1,0 +1,25 @@
+<view>
+<view class="text">
+<view class="text1">一、具有完全民事行为能力；</view>
+<view class="text1">二、犬主申请养犬登记信息，需要准备好以下材料：</view>
+<view class="text1">1、个人养犬：犬主手持证件半身照、本人身份证正面照、本人身份证反面照、房屋凭证、犬只正面照、犬只左侧近照、犬只右侧近照、主人和犬只合照；</view>
+<view class="text1">2、单位养犬：营业执照、法人身份证照片、养犬负责人身份证正面照、养犬负责人身份证反面照、犬只正面照、犬只左侧近照、犬只右侧近照、主人和犬只合照；</view>
+<view class="text1">对于上传虚假信息和涉及伪造犬牌、犬证的行为一经查实，将追究其法律责任；</view>
+<view class="text1">三、您所提交的信息均会保证信息安全。</view>
+
+</view>
+
+
+
+
+
+
+<view class="bottom">
+<view bindtap="btn1" class="btn1">
+<view class="word">暂不申请</view>
+</view>
+<view bindtap="btn" class="btn" style="background: linear-gradient(#0381ff, #1f4fdb);">
+  <view class="word1">立即申请</view>
+</view>
+</view>
+</view>

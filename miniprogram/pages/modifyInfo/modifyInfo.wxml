@@ -1,0 +1,104 @@
+<!--pages/modifyInfo/modifyInfo.wxml-->
+<view>
+
+  <view class="first">
+    <view class="doginfo_title">
+      <view class="divLine"></view>
+      <view class="title">犬只信息</view>
+    </view>
+
+    <view class="doginfo">
+
+      <view class="one">
+        <van-row gutter="20">
+          <van-col span="12">宠物名称：{{doginfo.name}}</van-col>
+          <van-col span="10">宠物重量: {{doginfo.weight}} kg</van-col>
+        </van-row>
+      </view>
+
+      <view class="one">
+        <van-row gutter="20">
+          <van-col span="12">宠物性别: {{doginfo.sex}}</van-col>
+          <van-col span="10">宠物类型: {{doginfo.type}}</van-col>
+        </van-row>
+      </view>
+
+      <view class="one">
+        <van-row gutter="20">
+          <van-col span="12">宠物年龄: {{doginfo.age}} 个月</van-col>
+          <van-col span="10">绝育状态: {{doginfo.state}}</van-col>
+        </van-row>
+      </view>
+
+      <view class="one">
+        <van-row gutter="20">
+          <van-col span="12">宠物品种：{{doginfo.var}}</van-col>
+        </van-row>
+      </view>
+    </view>
+
+
+
+    <view class="picture">
+      <view>
+        <image src="{{front}}"></image>
+        <view class="describe">犬只正面照</view>
+      </view>
+      <view>
+        <image src="{{side}}"></image>
+        <view class="describe">犬只侧面照</view>
+      </view>
+      <view wx:if="{{group!=''}}">
+        <image src="{{group}}"></image>
+        <view class="describe">犬主犬只合照</view>
+      </view>
+    </view>
+
+
+  </view>
+
+  <view class="second">
+    <view class="ownerinfo_title">
+      <view class="divLine"></view>
+      <view class="title1">犬主信息</view>
+    </view>
+
+
+
+    <view class="ownerinfo">
+      <view class="ownerinfo_name">
+        <view class="one"> 犬主姓名： </view>
+        <input disabled="true" class="name" style="width:80rpx" value="{{ownerinfo.name}}"> </input>
+
+      </view>
+
+      <view class="ownerinfo_real">
+        <view class="one"> 联系方式： </view>
+        <input disabled="{{check}}" type="number" maxlength="11" confirm-type="done" focus="{{!check}}" class="name"
+          style="width:180rpx" value="{{ownerinfo.phone}}" bindblur="com" bindinput="phone"> </input>
+        <view class="icon" bindtap="changeNum">
+          <van-icon color="blue" size="25px" name="edit" />
+        </view>
+      </view>
+
+      <view class="ownerinfo_address">
+        <view class="one"> 详细地址： </view>
+        <view class="icon" bindtap="changeAdd">
+          <van-icon color="blue" size="25px" name="edit" />
+        </view>
+      </view>
+      <textarea type="text" disabled="{{check2}}" confirm-type="done" focus="{{!check2}}" bindblur="com2" class="name1"
+        value="{{ownerinfo.address}}" bindinput="add"> </textarea>
+    </view>
+  </view>
+
+  <view>
+    <button class="btn" style="width:80%;" bindtap="btn">提交</button>
+  </view>
+
+
+
+
+
+
+</view>

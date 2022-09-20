@@ -1,0 +1,164 @@
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+.all{
+  margin-top: 150rpx;
+}
+.btn_return1 {
+  margin-top: 40rpx;
+  color: black;
+  border-radius: 0rpx;
+  font-size: large;
+  text-align: center;
+}
+
+.title,
+.title1 {
+  margin-left: 6rpx;
+  font-weight: bold;
+}
+
+.doginfo_title {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.divLine {
+  margin-top: 5rpx;
+  width: 10rpx;
+  height: 35rpx;
+  border-radius: 20rpx;
+  background-color: blue;
+  margin-left: 20rpx;
+}
+
+.divLine1 {
+  background: blue;
+  width: 30%;
+  height: 5rpx;
+  margin-left: 30rpx;
+}
+
+.doginfo,
+.one {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: small;
+
+}
+
+.ownerinfo_title {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin-top: 40rpx
+}
+
+.ownerinfo {
+  margin-left: 15rpx;
+}
+
+.incivilization {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin-top: 40rpx
+}
+
+.picture {
+  width: 300rpx;
+  height: 200rpx;
+  position: absolute;
+  left: 400rpx;
+  top: 200rpx;
+  box-shadow: 0 5rpx 10rpx 3rpx rgba(170, 170, 170, 0.50);
+}
+
+.limit {
+  font-size: xx-small;
+  color: gray;
+}
+
+.txt {
+  width: 95%;
+  height: 150rpx;
+  border: 1rpx solid gray;
+  font-size: small;
+  margin-left: 15rpx;
+  margin-top: 40rpx;
+}
+
+.numberlimit {
+  position: absolute;
+  left: 600rpx;
+  top: 1080rpx;
+}
+
+.conts {
+  width: 100%;
+  height: auto;
+  margin-top: 50rpx;
+}
+
+.areas {
+  width: 90%;
+  margin-left: 35rpx;
+  height: 220rpx;
+  font-size: 30rpx;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  position: relative;
+  padding-top: 15rpx;
+  padding-left: 10rpx;
+}
+
+
+.currentWordNumber {
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.currentWordNumber1 {
+  font-size: 28rpx;
+  color: rgb(255, 0, 0);
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.numberlimit {
+  position: absolute;
+  left: 650rpx;
+  top: 630rpx;
+}
+
+.btn {
+  margin-top: 50rpx;
+  background-color: #5677fc;
+  color: white;
+  font-size: large;
+
+  margin-bottom: 30rpx;
+  background: linear-gradient(#0381ff, #1f4fdb);
+  border-radius: 0rpx;
+
+}
+
+.upload {
+  margin-left: 50rpx;
+  margin-top: 40rpx;
+
+}
+
+.divLine_long {
+  margin-top: 30rpx;
+  width: 100%;
+  height: 20rpx;
+  background-color: #f7f7f7;
+}

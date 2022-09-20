@@ -1,0 +1,57 @@
+<view class="contian">
+    <!-- 顶部导航-->
+    <view class="top">
+        <view class="bar">
+            <text class="bar1" catchtap="info" style="background-color:{{bgcolor1}};color:{{wcolor1}}">资讯</text>
+            <text class="bar2" catchtap="search" style="background-color:{{bgcolor2}};color:{{wcolor2}}">寻犬</text>
+        </view>
+    </view>
+    <!--资讯内容-->
+    <view class="bottom" hidden="{{hide1}}">
+        <view class="allword" wx:if="{{detail==''}}">这里还未进行发布</view>
+        <block wx:for="{{detail}}">
+            <view class="border" bindtap="toDetail" data-index="{{index}}">
+                <!--详情边框-->
+                <view class="infotop">
+                    <!-- <image src="{{item.avatarUrl}}" class="headimg"></image>发布者头像 -->
+                    <text class="name">{{item.uploadPerson}}</text>
+                    <text class="time">{{item.addTime}}</text>
+                </view>
+                <view class="title">{{item.title}}</view>
+                <view class="content">
+                    <text class="text">{{item.describe}}</text>
+                    <image class="poster" src="{{item.cover}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!-- 寻犬内容 -->
+    <view class="bottom search" hidden="{{hide2}}">
+        <view class="publish" bindtap="Topublish">我要发布</view>
+        <view class="allword" wx:if="{{dogDetail==''}}">这里还没有寻犬信息</view>
+        <block wx:for="{{dogDetail}}">
+            <view class="border1" bindtap="toDogDetail" data-dog="{{index}}">
+                <!--详情边框-->
+                <view class="infotop">
+                    <!-- <image src="{{item.avatarUrl}}" class="headimg"></image>发布者头像 -->
+                    <text class="name">{{item.uploadPerson}}</text>
+                    <text class="time">{{item.addTime}}</text>
+                </view>
+                <view class="title">{{item.title}}</view>
+                <view class="content">
+                    <view class="text">{{item.content}}</view>
+
+                    <!-- 图片取值 -->
+                    <wxs module="m1">
+                        var getfirstimg = function (str) {
+                            var ss = str.split(",");
+                            return ss[0];
+                        }
+                        module.exports.getfirstimg = getfirstimg;
+                    </wxs>
+                    <image class="poster" src="{{m1.getfirstimg(item.img)}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

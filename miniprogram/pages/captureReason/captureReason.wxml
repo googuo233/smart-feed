@@ -1,0 +1,43 @@
+<view class="all">
+  <!-- <view class="txt"  >
+ <textarea class="nr" type="text" placeholder="请输入收缴原因" ></textarea>
+ </view> -->
+  <view class="doginfo_title">
+
+    <view class="divLine"></view>
+    <view class="title">宠物收缴</view>
+  </view>
+
+  <view class="upload">
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delete" multiple="{{true}}"
+      max-count="5" />
+    <view class="limit">jpg格式图片,最多五张</view>
+    <view class="limit">(请在网络畅通下进行操作)</view>
+  </view>
+
+
+  <view class="conts">
+    <textarea class="areas" placeholder='输入收缴描述，最多输入100个字符' maxlength="{{orderNoteMax}}" bindinput="inputs">
+      <!-- <text class="currentWordNumber">{{currentWordNumber|0}}/{{orderNoteMax}}</text> -->
+      <text class="currentWordNumber1">{{content}}</text>
+  </textarea>
+  </view>
+
+
+
+  <view class="btn">
+    <button bindtap="success" class="btn_return" style="width:86%" disabled="{{btnview}}">上报系统</button>
+    <button bindtap="back" class="btn_return1" style="width:86%">回到首页</button>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+</view>

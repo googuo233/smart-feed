@@ -1,0 +1,100 @@
+<!--pages/scanDetail/scanDetail.wxml-->
+<view class="all">
+
+   <view class="doginfo_title">
+
+      <view class="divLine"></view>
+      <view class="title">犬只信息</view>
+   </view>
+   <view class="doginfo">
+      <view class="one">
+         宠物名称：{{doginfo.name}}
+
+      </view>
+      <view class="one">
+
+         宠物类型：
+         {{doginfo.type}}
+
+      </view>
+      <view class="one">
+
+         宠物品种：{{doginfo.var}}
+
+      </view>
+      <view class="one">
+         宠物性别：
+         {{doginfo.sex}}
+
+      </view>
+      <view class="one">
+
+         犬主有效期：
+         {{doginfo.date}}
+
+      </view>
+      <view class="one">
+
+         是否注射疫苗：{{doginfo.choice}}
+      </view>
+      <view>
+         <image class="picture" src="{{doginfo.dogpic}}"></image>
+      </view>
+   </view>
+
+   <view class="divLine_long"></view>
+
+   <view class="ownerinfo_title">
+      <view class="divLine"></view>
+      <view class="title1">犬主信息</view>
+
+   </view>
+   <view class="ownerinfo">
+      <view class="one">
+         犬主姓名：
+         {{ownerinfo.name}}
+
+      </view>
+
+      <view class="one">
+
+         联系方式:
+         {{ownerinfo.real}}
+
+      </view>
+
+      <view class="one">
+
+         家庭地址:
+         {{ownerinfo.address}}
+
+      </view>
+   </view>
+   <view class="divLine_long"></view>
+
+   <view class="incivilization">
+      <view class="divLine"></view>
+      <view class="title1">不文明信息上报</view>
+   </view>
+   <view class="upload">
+      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delete" multiple="{{true}}"
+         max-count="5" />
+      <view class="limit">jpg格式图片,最多五张</view>
+      <view class="limit">(请在网络畅通下进行操作)</view>
+   </view>
+
+   <view class="conts">
+      <textarea class="areas" placeholder='输入不文明行为描述，最多输入100个字符' maxlength="{{orderNoteMax}}" bindinput="inputs">
+      <!-- <text class="currentWordNumber">{{currentWordNumber|0}}/{{orderNoteMax}}</text> -->
+      <text class="currentWordNumber1">{{content}}</text>
+  </textarea>
+   </view>
+
+
+   <view>
+      <button bindtap="finis" class="btn" style="width:86%;" disabled="{{btnview}}">确认上报</button>
+      <button bindtap="back" class="btn_return1" style="width:86%">回到首页</button>
+   </view>
+
+
+</view>

@@ -1,0 +1,25 @@
+<view class="map">
+  <map id="shelter" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}"
+    show-location="true" enable-zoom="true" />
+  <!-- catchmarkertap="tapMark"
+data-index="{{index}}" -->
+  <scroll-view scroll-y="true">
+    <block wx:for="{{markers}}">
+      <view class="div">
+        <view class="add" bindtap="toMark" data-index="{{index}}">
+          <image src="../../images/address.png" class="addImg"></image>
+          <view style="width: 90rpx;">位置：</view>
+          <view class="address" selectable="true">{{item.address}}</view>
+        </view>
+        <view class="phone">
+          <image src="../../images/phone.png" class="cellImg"></image>
+          <text>电话：</text><text selectable="true">{{item.phoneNumber}}</text>
+        </view>
+      </view>
+    </block>
+    <view class="allword" wx:if="{{markers==''}}">收容所还未添加，请稍后关注</view>
+  </scroll-view>
+</view>
+<!-- <button type="primary" bindtap="getCenterLocation">获取位置</button>
+
+<button type="primary" bindtap="move">当前定位</button> -->
